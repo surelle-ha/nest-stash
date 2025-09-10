@@ -5,13 +5,8 @@ import {
   FileDriver,
   DatabaseDriver,
 } from './app.driver';
-import {
-  CacheDriver,
-  SuperCacheModuleOptions,
-} from './app.interface';
+import { CacheDriver, SuperCacheModuleOptions } from './app.interface';
 import { SuperCacheService } from './app.service';
-
-const DRIVER_TOKEN = 'SUPER_CACHE_DRIVER';
 
 @Global()
 @Module({})

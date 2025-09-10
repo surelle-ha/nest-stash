@@ -5,7 +5,7 @@ import { CacheDriver, ExtraSetOptions } from './app.interface';
 export class SuperCacheService {
   constructor(
     @Inject('SUPER_CACHE_DRIVER') private readonly driver: CacheDriver,
-  ) { }
+  ) {}
 
   //** MAINTENANCE */
   async clear(): Promise<Record<string, any>> {
@@ -20,8 +20,10 @@ export class SuperCacheService {
     return {
       driver: this.driver.constructor.name,
       options: this.driver['options'] || {},
-      size: await this.driver.getAll().then(items => Object.keys(items).length),
-      keys: await this.driver.getAll().then(items => Object.keys(items))
+      size: await this.driver
+        .getAll()
+        .then((items) => Object.keys(items).length),
+      keys: await this.driver.getAll().then((items) => Object.keys(items)),
     };
   }
 
@@ -30,7 +32,11 @@ export class SuperCacheService {
     return this.driver.get<T>(key);
   }
 
-  async set<T>(key: string, value: T, extraSetOptions: ExtraSetOptions): Promise<void> {
+  async set<T>(
+    key: string,
+    value: T,
+    extraSetOptions: ExtraSetOptions,
+  ): Promise<void> {
     return this.driver.set<T>(key, value, extraSetOptions);
   }
 
@@ -44,7 +50,11 @@ export class SuperCacheService {
   }
 
   //** ADVANCE KEY MANAGEMENT */
-  async getOrSet<T>(key: string, value: T, extraSetOptions: ExtraSetOptions): Promise<T> {
+  async getOrSet<T>(
+    key: string,
+    value: T,
+    extraSetOptions: ExtraSetOptions,
+  ): Promise<T> {
     const cachedValue = await this.get<T>(key);
     if (cachedValue !== null) {
       return cachedValue;

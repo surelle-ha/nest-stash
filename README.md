@@ -1,99 +1,90 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h2>STASH - NestJS Multi-Driver Cache Module</h2>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<a href="https://github.com/surelle-ha/nest-stash/actions/workflows/npm-registry.yml">
+  <img src="https://github.com/surelle-ha/nest-stash/actions/workflows/npm-registry.yml/badge.svg" alt="⚡ Github Registry">
+</a>
 
-## Description
+<a href="https://github.com/surelle-ha/nest-stash/actions/workflows/dependency-check.yml">
+  <img src="https://github.com/surelle-ha/nest-stash/actions/workflows/dependency-check.yml/badge.svg" alt="⚡ Github Registry">
+</a>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Project setup
+<img align="right" width=200px alt="Unicorn" src="https://cdn3d.iconscout.com/3d/free/thumb/free-nestjs-3d-icon-download-in-png-blend-fbx-gltf-file-formats--javascript-typescript-node-js-server-side-coding-lang-pack-logos-icons-7578005.png"/>
 
-```bash
-$ npm install
-```
+Nest Stash is a powerful multi-driver caching module for NestJS that provides a clean, unified API for managing application cache across different storage backends. Inspired by the flexibility of frameworks like Laravel, it allows developers to switch seamlessly between cache drivers—such as in-memory, Redis, and other supported stores—without changing the way they interact with the cache layer.
 
-## Compile and run the project
+By centralizing caching logic, Nest Stash makes it easy to boost application performance, reduce redundant database queries, and optimize response times. It is designed with extensibility in mind, giving you the ability to plug in custom drivers if your use case goes beyond the built-in options.
 
-```bash
-# development
-$ npm run start
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-# watch mode
-$ npm run start:dev
+<div align="center">
 
-# production mode
-$ npm run start:prod
-```
+</div>
 
-## Run tests
+## Usage
 
-```bash
-# unit tests
-$ npm run test
+> I'm currently working on the documentation. Once it's ready, I'll update this section with detailed usage instructions and examples.
 
-# e2e tests
-$ npm run test:e2e
+## Quick Start for Contributors
 
-# test coverage
-$ npm run test:cov
-```
+To get started, here’s what you need to know:
 
-## Deployment
+### Code of Conduct
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+We prioritize creating a respectful and inclusive environment. Please review and adhere to our Code of Conduct to ensure a positive experience for all collaborators.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### Reporting Bugs
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
+If you find a bug in the codebase:
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+1. **Check Existing Issues:** Verify if the issue has already been reported to avoid duplication.
+2. **Create a Detailed Issue:** Include a descriptive title, a clear explanation of the problem, steps to reproduce, and the expected outcome.
 
-## Resources
+### Feature Requests
 
-Check out a few resources that may come in handy when working with NestJS:
+To suggest a new feature:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+1. **Search Existing Suggestions:** Check if someone else has already proposed something similar.
+2. **Submit a New Issue:** Clearly describe the proposed feature, its benefits, and possible implementations.
 
-## Support
+## How to Contribute Code
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Setting Up Your Development Environment
 
-## Stay in touch
+1. **Fork the Repository:** Start by forking the project repository on GitHub.
+2. **Clone Your Fork:** Clone your forked repository to your local machine.
+3. **Install Dependencies:** Navigate to the project directory and run `npm install` to install required dependencies.
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Making Changes
 
-## License
+1. **Create a New Branch:** Use a branch specific to the feature or fix you are working on.
+2. **Commit Changes:** Make your changes in the new branch. Commit messages should clearly explain the purpose of the changes.
+3. **Write Tests:** Add or update tests to cover the new functionality or fixes. Ensure all tests pass.
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### Pull Request Process
+
+1. **Update Your Branch:** Rebase your branch on the latest main branch to ensure a smooth integration.
+2. **Submit a Pull Request (PR):** Push your branch to GitHub and open a PR against the main branch of the original project repository.
+3. **Review Process:** The project maintainer will review your PR. Be open to making revisions based on feedback.
+4. **PR Approval and Merge:** Once approved, the maintainers will merge your PR.
+
+## Additional Resources
+
+-   **Documentation:** Familiarize yourself with the project documentation to understand how to use and extend the project.
+-   ~~**Community:** Join our community forums or chat channels to discuss ideas and ask questions.~~
+
+## Acknowledgments
+
+Contributors who help improve the project make a significant impact. We appreciate your dedication and effort in enhancing this project.
+
+Thank you for choosing to contribute to the project. We look forward to your contributions!
+
+<a href="https://github.com/surelle-ha/nest-stash/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=surelle-ha/nest-stash" />
+</a>
+
+#
+
+<img width="200px" src="https://i.ibb.co/F72MdpH/surellebanner1512.png" alt="surellebanner1512" border="0"/>

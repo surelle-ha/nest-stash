@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { CacheDriver, ExtraSetOptions } from './super-cache.interface';
+import { CacheDriver, ExtraSetOptions } from './app.interface';
 
 @Injectable()
 export class SuperCacheService {

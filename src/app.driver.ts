@@ -1,6 +1,6 @@
-import { SuperCache } from './super-cache.model';
+import { SuperCache } from './app.model';
 import { Op } from 'sequelize';
-import { CacheDriver, DatabaseOptions, ExtraSetOptions, FileOptions, MemoryOptions, RedisOptions, XStoredItem } from './super-cache.interface';
+import { CacheDriver, DatabaseOptions, ExtraSetOptions, FileOptions, MemoryOptions, RedisOptions, XStoredItem } from './app.interface';
 import { promises as fs } from 'fs';
 import * as path from 'path';
 import Redis from 'ioredis';

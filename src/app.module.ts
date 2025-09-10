@@ -4,12 +4,12 @@ import {
   MemoryDriver,
   FileDriver,
   DatabaseDriver,
-} from './super-cache.driver';
+} from './app.driver';
 import {
   CacheDriver,
   SuperCacheModuleOptions,
-} from './super-cache.interface';
-import { SuperCacheService } from './super-cache.service';
+} from './app.interface';
+import { SuperCacheService } from './app.service';
 
 const DRIVER_TOKEN = 'SUPER_CACHE_DRIVER';
 

@@ -5,13 +5,13 @@
   "author": "surelle-ha",
   "private": true,
   "license": "UNLICENSED",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
-		"url": "https://github.com/surelle-ha/nest-stash.git"
-	},
+    "url": "https://github.com/surelle-ha/nest-stash.git"
+  },
   "scripts": {
-    "prepare": "npx husky",
+    "prepare": "husky",
     "commit": "commit",
     "link": "npm link",
     "build": "nest build",
@@ -24,9 +24,14 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/prompt-cli": "^19.8.1",
     "@nestjs/common": "^11.0.1",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "commit": "^0.0.4",
+    "husky": "^9.1.7",
     "ioredis": "^5.7.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",

@@ -3,8 +3,6 @@
   "version": "1.0.1",
   "description": "",
   "author": "surelle-ha",
-  "private": true,
-  "license": "UNLICENSED",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {

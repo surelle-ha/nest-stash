@@ -1,21 +1,21 @@
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-<h2>STASH - NestJS Multi-Driver Cache Module</h2>
+<h2>Eleven Cache - NestJS Multi-Driver Cache Module</h2>
 
-<a href="https://github.com/surelle-ha/nest-stash/actions/workflows/npm-registry.yml">
-  <img src="https://github.com/surelle-ha/nest-stash/actions/workflows/npm-registry.yml/badge.svg" alt="⚡ Github Registry">
+<a href="https://github.com/surelle-ha/eleven-cache/actions/workflows/npm-registry.yml">
+  <img src="https://github.com/surelle-ha/eleven-cache/actions/workflows/npm-registry.yml/badge.svg" alt="⚡ Github Registry">
 </a>
 
-<a href="https://github.com/surelle-ha/nest-stash/actions/workflows/dependency-check.yml">
-  <img src="https://github.com/surelle-ha/nest-stash/actions/workflows/dependency-check.yml/badge.svg" alt="⚡ Github Registry">
+<a href="https://github.com/surelle-ha/eleven-cache/actions/workflows/dependency-check.yml">
+  <img src="https://github.com/surelle-ha/eleven-cache/actions/workflows/dependency-check.yml/badge.svg" alt="⚡ Github Registry">
 </a>
 
 
 <img align="right" width=200px alt="Unicorn" src="https://cdn3d.iconscout.com/3d/free/thumb/free-nestjs-3d-icon-download-in-png-blend-fbx-gltf-file-formats--javascript-typescript-node-js-server-side-coding-lang-pack-logos-icons-7578005.png"/>
 
-Nest Stash is a powerful multi-driver caching module for NestJS that provides a clean, unified API for managing application cache across different storage backends. Inspired by the flexibility of frameworks like Laravel, it allows developers to switch seamlessly between cache drivers—such as in-memory, Redis, and other supported stores—without changing the way they interact with the cache layer.
+Eleven Cache is a powerful multi-driver caching module for NestJS that provides a clean, unified API for managing application cache across different storage backends. It allows developers to switch seamlessly between cache drivers—such as in-memory, Redis, and other supported stores—without changing the way they interact with the cache layer.
 
-By centralizing caching logic, Nest Stash makes it easy to boost application performance, reduce redundant database queries, and optimize response times. It is designed with extensibility in mind, giving you the ability to plug in custom drivers if your use case goes beyond the built-in options.
+By centralizing caching logic, Eleven Cache makes it easy to boost application performance, reduce redundant database queries, and optimize response times. It is designed with extensibility in mind, giving you the ability to plug in custom drivers if your use case goes beyond the built-in options.
 
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
@@ -81,8 +81,8 @@ Contributors who help improve the project make a significant impact. We apprecia
 
 Thank you for choosing to contribute to the project. We look forward to your contributions!
 
-<a href="https://github.com/surelle-ha/nest-stash/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=surelle-ha/nest-stash" />
+<a href="https://github.com/surelle-ha/eleven-cache/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=surelle-ha/eleven-cache" />
 </a>
 
 #

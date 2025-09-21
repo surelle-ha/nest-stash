@@ -7,7 +7,7 @@ import {
 } from 'sequelize-typescript';
 
 @Table({ tableName: 'app_caches', timestamps: false })
-export class NestStash extends Model {
+export class ElevenCache extends Model {
   @PrimaryKey
   @Column
   key!: string;

@@ -5,14 +5,14 @@ import {
   FileDriver,
   DatabaseDriver,
 } from './app.driver';
-import { CacheDriver, NestStashModuleOptions } from './app.interface';
-import { NestStashService } from './app.service';
+import { CacheDriver, ElevenCacheModuleOptions } from './app.interface';
+import { ElevenCacheService } from './app.service';
 
 @Global()
 @Module({})
-export class NestStashModule {
-  static forRoot(options: NestStashModuleOptions): DynamicModule {
-    const DRIVER_TOKEN = `NEST_STASH_DRIVER::${options.driver.toUpperCase()}`;
+export class ElevenCacheModule {
+  static forRoot(options: ElevenCacheModuleOptions): DynamicModule {
+    const DRIVER_TOKEN = `ELEVEN_CACHE_DRIVER::${options.driver.toUpperCase()}`;
 
     const driverProvider: Provider = {
       provide: DRIVER_TOKEN,
@@ -32,13 +32,13 @@ export class NestStashModule {
     };
 
     const cacheServiceProvider: Provider = {
-      provide: `NEST_STASH_${options.driver.toUpperCase()}_DRIVER`,
-      useFactory: (driver: CacheDriver) => new NestStashService(driver),
+      provide: `ELEVEN_CACHE_${options.driver.toUpperCase()}_DRIVER`,
+      useFactory: (driver: CacheDriver) => new ElevenCacheService(driver),
       inject: [DRIVER_TOKEN],
     };
 
     return {
-      module: NestStashModule,
+      module: ElevenCacheModule,
       providers: [driverProvider, cacheServiceProvider],
       exports: [cacheServiceProvider],
     };

@@ -2,9 +2,9 @@ import { Inject, Injectable } from '@nestjs/common';
 import { CacheDriver, ExtraSetOptions } from './app.interface';
 
 @Injectable()
-export class NestStashService {
+export class ElevenCacheService {
   constructor(
-    @Inject('NEST_STASH_DRIVER') private readonly driver: CacheDriver,
+    @Inject('ELEVEN_CACHE_DRIVER') private readonly driver: CacheDriver,
   ) { }
 
   //** MAINTENANCE */

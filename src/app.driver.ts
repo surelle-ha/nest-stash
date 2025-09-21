@@ -1,4 +1,4 @@
-import { SuperCache } from './app.model';
+import { NestStash } from './app.model';
 import { Op } from 'sequelize';
 import {
   CacheDriver,
@@ -182,16 +182,16 @@ export class DatabaseDriver implements CacheDriver {
   private ttl: number | undefined;
   constructor(private options: DatabaseOptions) {
     this.ttl = options.ttl;
-    options.sequelize.addModels([SuperCache]);
+    options.sequelize.addModels([NestStash]);
     if (options.autoSync !== false) {
-      SuperCache.sync().catch((err) => {
-        console.error('[SuperCache] Failed to sync cache table:', err);
+      NestStash.sync().catch((err) => {
+        console.error('[NestStash] Failed to sync cache table:', err);
       });
     }
   }
 
   async get<T>(key: string): Promise<T | null> {
-    const entry = await SuperCache.findByPk(key);
+    const entry = await NestStash.findByPk(key);
     if (!entry) return null;
     if (entry.expiresAt && Date.now() > entry.expiresAt) {
       await entry.destroy();
@@ -214,7 +214,7 @@ export class DatabaseDriver implements CacheDriver {
     if (typeof effectiveTtl === 'number') {
       expiresAt = Date.now() + effectiveTtl * 1000;
     }
-    await SuperCache.upsert({
+    await NestStash.upsert({
       key,
       value: JSON.stringify(value),
       ...(expiresAt !== undefined ? { expiresAt } : {}),
@@ -222,7 +222,7 @@ export class DatabaseDriver implements CacheDriver {
   }
 
   async del(key: string): Promise<void> {
-    await SuperCache.destroy({ where: { key } });
+    await NestStash.destroy({ where: { key } });
   }
 
   async getAll<T = any>(pattern = '%'): Promise<Record<string, T>> {
@@ -231,7 +231,7 @@ export class DatabaseDriver implements CacheDriver {
       const pgPattern = pattern.replace(/\*/g, '%');
       where.key = { [Op.like]: pgPattern };
     }
-    const entries = await SuperCache.findAll({ where });
+    const entries = await NestStash.findAll({ where });
     const result: Record<string, T> = {};
     for (const entry of entries) {
       if (entry.expiresAt && Date.now() > entry.expiresAt) {
@@ -251,7 +251,7 @@ export class DatabaseDriver implements CacheDriver {
     const keys = await this.getAll(pattern);
     const keyList = Object.keys(keys);
     if (keyList.length > 0) {
-      await SuperCache.destroy({ where: { key: { [Op.in]: keyList } } });
+      await NestStash.destroy({ where: { key: { [Op.in]: keyList } } });
     }
     return keys;
   }

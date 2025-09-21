@@ -5,14 +5,14 @@ import {
   FileDriver,
   DatabaseDriver,
 } from './app.driver';
-import { CacheDriver, SuperCacheModuleOptions } from './app.interface';
-import { SuperCacheService } from './app.service';
+import { CacheDriver, NestStashModuleOptions } from './app.interface';
+import { NestStashService } from './app.service';
 
 @Global()
 @Module({})
-export class SuperCacheModule {
-  static forRoot(options: SuperCacheModuleOptions): DynamicModule {
-    const DRIVER_TOKEN = `SUPER_CACHE_DRIVER::${options.driver.toUpperCase()}`;
+export class NestStashModule {
+  static forRoot(options: NestStashModuleOptions): DynamicModule {
+    const DRIVER_TOKEN = `NEST_STASH_DRIVER::${options.driver.toUpperCase()}`;
 
     const driverProvider: Provider = {
       provide: DRIVER_TOKEN,
@@ -32,13 +32,13 @@ export class SuperCacheModule {
     };
 
     const cacheServiceProvider: Provider = {
-      provide: `SUPER_CACHE_${options.driver.toUpperCase()}_DRIVER`,
-      useFactory: (driver: CacheDriver) => new SuperCacheService(driver),
+      provide: `NEST_STASH_${options.driver.toUpperCase()}_DRIVER`,
+      useFactory: (driver: CacheDriver) => new NestStashService(driver),
       inject: [DRIVER_TOKEN],
     };
 
     return {
-      module: SuperCacheModule,
+      module: NestStashModule,
       providers: [driverProvider, cacheServiceProvider],
       exports: [cacheServiceProvider],
     };

@@ -2,10 +2,10 @@ import { Inject, Injectable } from '@nestjs/common';
 import { CacheDriver, ExtraSetOptions } from './app.interface';
 
 @Injectable()
-export class SuperCacheService {
+export class NestStashService {
   constructor(
-    @Inject('SUPER_CACHE_DRIVER') private readonly driver: CacheDriver,
-  ) {}
+    @Inject('NEST_STASH_DRIVER') private readonly driver: CacheDriver,
+  ) { }
 
   //** MAINTENANCE */
   async clear(): Promise<Record<string, any>> {

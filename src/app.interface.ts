@@ -30,7 +30,7 @@ export type XStoredItem = {
   expiresAt?: number;
 };
 
-export type SuperCacheModuleOptions =
+export type NestStashModuleOptions =
   | { driver: 'redis'; driverOptions: RedisOptions }
   | { driver: 'file'; driverOptions: FileOptions }
   | { driver: 'database'; driverOptions: DatabaseOptions }

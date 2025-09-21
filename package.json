@@ -1,12 +1,12 @@
 {
-  "name": "@surelle-ha/nest-stash",
+  "name": "@surelle-ha/eleven-cache",
   "version": "1.0.3",
   "description": "",
   "author": "surelle-ha",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
-    "url": "https://github.com/surelle-ha/nest-stash.git"
+    "url": "https://github.com/surelle-ha/eleven-cache.git"
   },
   "scripts": {
     "prepare": "husky",

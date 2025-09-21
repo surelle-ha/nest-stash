@@ -1,6 +1,6 @@
 {
   "name": "@surelle-ha/eleven-cache",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "author": "surelle-ha",
   "main": "dist/index.js",

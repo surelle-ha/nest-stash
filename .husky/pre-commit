@@ -1,5 +1,7 @@
-# GET VERSION FROM package.json
-CURRENT_VERSION=$(node -p "require('./package.json').version")
+# GET VERSION FROM STAGED package.json (not working dir)
+CURRENT_VERSION=$(git show :package.json | node -e "let input=''; process.stdin.on('data', c => input += c).on('end', () => process.stdout.write(JSON.parse(input).version));")
+
+# GET VERSION FROM MAIN BRANCH
 git fetch origin main --depth=1
 MAIN_VERSION=$(git show origin/main:package.json | node -e "let input=''; process.stdin.on('data', c => input += c).on('end', () => process.stdout.write(JSON.parse(input).version));")
 

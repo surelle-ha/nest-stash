@@ -1,5 +1,3 @@
-<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
-
 <h2>Eleven Cache - NestJS Multi-Driver Cache Module</h2>
 
 <a href="https://github.com/surelle-ha/eleven-cache/actions/workflows/npm-registry.yml">
@@ -26,6 +24,15 @@ By centralizing caching logic, Eleven Cache makes it easy to boost application p
 ## Usage
 
 > I'm currently working on the documentation. Once it's ready, I'll update this section with detailed usage instructions and examples.
+
+## Eleven Series - NestJS Packages
+
+| Package Name | Description | Status |
+|--------------|-------------|--------|
+| [Eleven Cache](https://github.com/surelle-ha/eleven-cache) | A powerful multi-driver caching module for NestJS. | In Development |
+| [Eleven Prometheus](https://github.com/surelle-ha/eleven-prometheus) | A NestJS module for integrating Prometheus monitoring. | Planning |
+| [Eleven Ntfy](https://github.com/surelle-ha/eleven-ntfy) | A NestJS module for integrating Ntfy notifications. | Planning |
+| [Eleven Common](https://github.com/surelle-ha/eleven-common) | A NestJS module for common utilities and shared functionality. | Planning |
 
 ## Quick Start for Contributors
 
